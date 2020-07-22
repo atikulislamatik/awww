@@ -1,26 +1,3 @@
-/*
-@File: Seven Template Styles
-
-* This file contains the styling for the actual template, this
-is the file you need to edit to change the look of the
-template.
-
-This files table contents are outlined below>>>>>
-
-*******************************************
-*******************************************
-
-** - Default CSS
-** - Preloader Area CSS
-** - Navbar Area CSS
-** - Banner Area CSS
-
-*******************************************
-*/
-
-/*
-Default Style
-============================*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
 $body-font-family: "'agency fb'", sans-serif;
 $heading-font-family: "Catamaran", sans-serif;
@@ -42,6 +19,7 @@ body {
     font-size: 14px;
     line-height: 1.8;
     font-family: "agency fb";
+    // overflow: hidden;
 }
 a {
     display: inline-block;
@@ -75,7 +53,6 @@ h3,
 h4,
 h5,
 h6 {
-    color: $heading-color;
     font-weight: 500;
 }
 h3 {
@@ -143,6 +120,20 @@ textarea {
     width: 0;
     background: #23272a;
 }
+.cursor {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: scale(0.1);
+    opacity: 0;
+    background-size: cover;
+    z-index: 1;
+}
+
+//  loader
+
 .loader-content {
     .overlay {
         position: absolute;
@@ -153,21 +144,189 @@ textarea {
     }
     .first {
         background: #464d53;
-      }
-      
-      .second {
+    }
+
+    .second {
         background: #ffeb00;
         left: 33.3%;
-      }
-      
-      .third {
+    }
+
+    .third {
         background: #494949;
         left: 66.6%;
-      }
+    }
 }
+
+// Navbar
+
+.toggle-btn {
+    position: fixed;
+    margin: 1.4em;
+    padding: 1em;
+    width: 40px;
+    height: 12px;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+    span.one {
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background: #fff;
+    }
+
+    span.two {
+        position: absolute;
+        width: 40px;
+        height: 2px;
+        background: #fff;
+        margin-top: 12px;
+    }
+}
+.menu {
+    position: absolute;
+    background: #101010;
+    height: 100vh;
+    width: 100%;
+    right: -100%;
+    overflow: hidden;
+    // z-index: 100;
+    .data {
+        padding: 10em 0 0 10em;
+        text-align: left;
+        .list {
+            position: relative;
+            z-index: 2;
+            color: white;
+            mix-blend-mode: difference;
+            cursor: pointer;
+            .menu-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                overflow: hidden;
+            }
+            .menu-title {
+                h1 {
+                    font-size: 42px !important;
+                    color: #fff !important;
+                    border-bottom: 1px solid #23272a;
+                    cursor: pointer !important;
+                }
+            }
+            &:hover {
+                .menu-title {
+                    h1 {
+                        color: #ffeb00 !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// .slider-text {
+//     position: absolute;
+//     bottom: 0;
+//     left: 150px;
+//     .single-text {
+//         h1 {
+//             font-size: 60px;
+//             span {
+//                 display: block;
+//                 font-size: 25px;
+//             }
+//         }
+//     }
+// }
+// .blocks {
+//     .block-1 {
+//         z-index: 1;
+//         position: fixed;
+//         height: 100vh;
+//         width: 5%;
+//         left: 0%;
+//         background: #0f0f0f;
+//     }
+
+//     .block-2 {
+//         z-index: 1;
+//         position: fixed;
+//         height: 100vh;
+//         width: 25%;
+//         left: 25%;
+//         background: #0f0f0f;
+//     }
+
+//     .block-3 {
+//         z-index: 1;
+//         position: fixed;
+//         height: 100vh;
+//         width: 5%;
+//         right: 0%;
+//         background: #0f0f0f;
+//     }
+// }
+
+// .image-slider {
+//     z-index: -1;
+//     margin: 0 auto;
+//     padding: 0;
+//     width: 100%;
+//     height: 100vh;
+
+//     .image-slide {
+//         height: 100vh;
+//         margin: 0 auto;
+//     }
+//     #one{
+//         background: url(../images/7.jpg) no-repeat;
+//         background-position: center center;
+//         background-size: cover;
+//     }
+//     #two{
+//         background: url(../images/6.jpg) no-repeat;
+//         background-position: center center;
+//         background-size: cover;
+//     }
+//     #three{
+//         background: url(../images/5.jpg) no-repeat;
+//         background-position: center center;
+//         background-size: cover;
+//     }
+//     #four{
+//         background: url(../images/7.jpg) no-repeat;
+//         background-position: center center;
+//         background-size: cover;
+//     }
+// }
+
+// .slick-slide.slick-center {
+//     transform: scale(1.2);
+//     transition: transform .8s 1.4s cubic-bezier(.84, 0, .08, .99);
+// }
+
+// .slick-slide {
+//     transition: transform .7s cubic-bezier(.84, 0, .08, .99);
+// }
+
+// .slider-control {
+//     margin: 0%;
+//     position: absolute;
+//     z-index: 2;
+//     bottom: 8%;
+//     left: 15%;
+//     transform: translate(-50%, -50%);
+//     display: flex;
+// }
+
+
 .banner-area {
     position: relative;
-    z-index: 10;
+    z-index: -1;
     overflow: hidden;
     &::before {
         position: absolute;
@@ -181,6 +340,7 @@ textarea {
         background-size: cover;
         background-position: center center;
     }
+
     .navbar {
         height: 100vh;
         padding: 0 1rem;
@@ -200,52 +360,7 @@ textarea {
                 font-size: 20px;
             }
         }
-        .menu {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-            text-align: right;
-            padding-top: 50px;
-            ul {
-                li {
-                    padding: 8px;
-                    color: #e8e8e8;
-                    font-size: 20px;
-                    font-weight: 500;
-                    text-transform: uppercase;
-                    cursor: pointer;
-                    position: relative;
-                    overflow: hidden;
-                    z-index: 1;
-                    transition: $transition;
-                    &::before {
-                        content: "";
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        width: 0;
-                        height: 100%;
-                        z-index: -1;
-                        transition: all 0.5s;
-                        background: #ffeb00;
-                    }
-                    a {
-                        color: #e8e8e8;
-                        position: relative;
-                    }
-                    &:hover {
-                        a {
-                            color: $black-color;
-                        }
-                        &::before {
-                            left: 0;
-                            right: auto;
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
+
         .scrolldown{
             transform: rotate(-90deg);
             position: relative;

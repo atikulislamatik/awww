@@ -1,25 +1,3 @@
-/*
-@File: Seven Template Styles
-
-* This file contains the styling for the actual template, this
-is the file you need to edit to change the look of the
-template.
-
-This files table contents are outlined below>>>>>
-
-*******************************************
-*******************************************
-
-** - Default CSS
-** - Preloader Area CSS
-** - Navbar Area CSS
-** - Banner Area CSS
-
-*******************************************
-*/
-/*
-Default Style
-============================*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
 body {
   padding: 0;
@@ -69,7 +47,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: #293a5c;
   font-weight: 500;
 }
 
@@ -164,6 +141,19 @@ textarea.form-control {
   background: #23272a;
 }
 
+.cursor {
+  position: absolute;
+  width: 500px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: scale(0.1);
+          transform: scale(0.1);
+  opacity: 0;
+  background-size: cover;
+  z-index: 1;
+}
+
 .loader-content .overlay {
   position: absolute;
   width: 100%;
@@ -186,9 +176,78 @@ textarea.form-control {
   left: 66.6%;
 }
 
+.toggle-btn {
+  position: fixed;
+  margin: 1.4em;
+  padding: 1em;
+  width: 40px;
+  height: 12px;
+  right: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.toggle-btn span.one {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #fff;
+}
+
+.toggle-btn span.two {
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background: #fff;
+  margin-top: 12px;
+}
+
+.menu {
+  position: absolute;
+  background: #101010;
+  height: 100vh;
+  width: 100%;
+  right: -100%;
+  overflow: hidden;
+}
+
+.menu .data {
+  padding: 10em 0 0 10em;
+  text-align: left;
+}
+
+.menu .data .list {
+  position: relative;
+  z-index: 2;
+  color: white;
+  mix-blend-mode: difference;
+  cursor: pointer;
+}
+
+.menu .data .list .menu-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.menu .data .list .menu-title h1 {
+  font-size: 42px !important;
+  color: #fff !important;
+  border-bottom: 1px solid #23272a;
+  cursor: pointer !important;
+}
+
+.menu .data .list:hover .menu-title h1 {
+  color: #ffeb00 !important;
+}
+
 .banner-area {
   position: relative;
-  z-index: 10;
+  z-index: -1;
   overflow: hidden;
 }
 
@@ -227,62 +286,6 @@ textarea.form-control {
 
 .banner-area .navbar .logo span {
   font-size: 20px;
-}
-
-.banner-area .navbar .menu {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  text-align: right;
-  padding-top: 50px;
-}
-
-.banner-area .navbar .menu ul li {
-  padding: 8px;
-  color: #e8e8e8;
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.banner-area .navbar .menu ul li::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 0;
-  height: 100%;
-  z-index: -1;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  background: #ffeb00;
-}
-
-.banner-area .navbar .menu ul li a {
-  color: #e8e8e8;
-  position: relative;
-}
-
-.banner-area .navbar .menu ul li:hover a {
-  color: #000000;
-}
-
-.banner-area .navbar .menu ul li:hover::before {
-  left: 0;
-  right: auto;
-  width: 100%;
 }
 
 .banner-area .navbar .scrolldown {
