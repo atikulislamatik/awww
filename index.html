@@ -2,91 +2,481 @@
 <html lang="zxx">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
-    <!-- Boxicon CSS -->
-    <link rel="stylesheet" href="assets/css/boxicons.min.css" />
-    <!-- Main CSS -->
-    <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Required meta tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+  <!-- Boxicon CSS -->
+  <link rel="stylesheet" href="assets/css/boxicons.min.css" />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
 
-    <!-- Tittle -->
-    <title>Awwwards - Creative</title>
+  <!-- Tittle -->
+  <title>Desh - Admin Dashboard</title>
 </head>
 
 <body>
 
-    <!-- PreLoader Start -->
-    <div class="loader-content">
-        <div class="d-table">
-            <div class="d-table-cell">
-                <div class="overlay first"></div>
-                <div class="overlay second"></div>
-                <div class="overlay third"></div>
-
-            </div>
+  <div class="page-wrapper chiller-theme toggled">
+    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+      <i class='bx bx-menu'></i>
+    </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <div class="sidebar-brand">
+          <a href="#">Desh</a>
+          <div id="close-sidebar">
+            <i class='bx bx-x'></i>
+          </div>
         </div>
-    </div>
-    <!-- PreLoader End -->
-
-    <section class="banner-area">
-        <div class="container-fluid pl-0 pr-0">
-            <div class="row">
-                <div class="col-lg-2 pl-0 pr-0">
-                    <div class="navbar">
-                        <div class="logo">
-                            <h1>Bengal Tiger</h1>
-                        </div>
-                        <div class="menu">
-                            <ul>
-                                <li><a href="#">home.</a></li>
-                                <li><a href="#">wild life.</a></li>
-                                <li><a href="#">contact.</a></li>
-                            </ul>
-                        </div>
-                        <div class="scrolldown">scroll</div>
-                    </div>
-                </div>
-                <div class="col-lg-9">
-                    <div class="ellipse-container">
-                        <div class="ellipse thin"></div>
-                        <div class="ellipse thick"></div>
-                        <div class="ellipse yellow"></div>
-                        <div class="circle1"><span>Maecenas purus at</span></div>
-                        <div class="circle2"><span>Fringilla Maecenas</span></div>
-                    </div>
-                    <div class="slider-content">
-                        <h1 class="title">Bengal Tiger</h1>
-                        <p>Mauris elementum, dui ac sagittis <br> cursus, libero elit sodales odio</p>
-                    </div>
-                    <div class="watchnow">
-                        <i class='bx bx-play'></i>
-                        <a href="#">watch now!</a>
-                    </div>
-                    <div class="media">
-                        <ul>
-                            <li><i class='bx bxl-facebook'></i></li>
-                            <li><i class='bx bxl-instagram'></i></li>
-                            <li><i class='bx bxl-github'></i></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="sidebar-header">
+          <div class="user-pic">
+            <img class="img-responsive img-rounded" src="../../assets/images/user.jpg" alt="User picture">
+          </div>
+          <div class="user-info">
+            <span class="user-name">Jhon
+              <strong>Smith</strong>
+            </span>
+            <span class="user-role">Administrator</span>
+            <span class="user-status">
+              <i class='bx bxs-circle'></i>
+              <span>Online</span>
+            </span>
+          </div>
         </div>
-    </section>
+        <!-- sidebar-header  -->
+        <div class="sidebar-search">
+          <div>
+            <div class="input-group">
+              <input type="text" class="form-control search-menu" placeholder="Search...">
+              <div class="input-group-append">
+                <span class="input-group-text">
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- sidebar-search  -->
+        <div class="sidebar-menu">
+          <ul>
+            <li class="header-menu">
+              <span>General</span>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class='bx bxs-home-heart'></i>
+                <span>Dashboard</span>
+                <span class="badge badge-pill badge-warning">New</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a class="active" href="#">Analytics</a>
+                  </li>
+                  <li>
+                    <a href="#">CRM</a>
+                  </li>
+                  <li>
+                    <a href="#">Helpdesk</a>
+                  </li>
+                  <li>
+                    <a href="#">Sales</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class='bx bx-duplicate'></i>
+                <span>Apps</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Email</a>
+                  </li>
+                  <li>
+                    <a href="#">Chart</a>
+                  </li>
+                  <li>
+                    <a href="#">Contact List</a>
+                  </li>
+                  <li>
+                    <a href="#">File Manager</a>
+                  </li>
+                  <li>
+                    <a href="#">Invoice</a>
+                  </li>
+                  <li>
+                    <a href="#">Tasks</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class='bx bxl-react'></i>
+                <span>Components</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">General</a>
+                  </li>
+                  <li>
+                    <a href="#">Panels</a>
+                  </li>
+                  <li>
+                    <a href="#">Tables</a>
+                  </li>
+                  <li>
+                    <a href="#">Icons</a>
+                  </li>
+                  <li>
+                    <a href="#">Forms</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class='bx bx-line-chart'></i>
+                <span>Charts</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Pie chart</a>
+                  </li>
+                  <li>
+                    <a href="#">Line chart</a>
+                  </li>
+                  <li>
+                    <a href="#">Bar chart</a>
+                  </li>
+                  <li>
+                    <a href="#">Histogram</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#">
+                <i class='bx bxs-lock'></i>
+                <span>Authentication</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#">Log in</a>
+                  </li>
+                  <li>
+                    <a href="#">Register</a>
+                  </li>
+                  <li>
+                    <a href="#">Recover Password</a>
+                  </li>
+                  <li>
+                    <a href="#">Lock Screen</a>
+                  </li>
+                  <li>
+                    <a href="#">Error 404</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-menu">
+              <span>Extra</span>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-book"></i>
+                <span>Documentation</span>
+                <span class="badge badge-pill badge-primary">Beta</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-calendar"></i>
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class="fa fa-folder"></i>
+                <span>Examples</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!-- sidebar-menu  -->
+      </div>
+      <!-- sidebar-content  -->
+      <div class="sidebar-footer">
+        <a href="#">
+          <i class='bx bxs-bell'></i>
+          <span class="badge badge-pill badge-warning notification">3</span>
+        </a>
+        <a href="#">
+          <i class='bx bxs-envelope'></i>
+          <span class="badge badge-pill badge-success notification">7</span>
+        </a>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="badge-sonar"></span>
+        </a>
+        <a href="#">
+          <i class='bx bx-power-off'></i>
+        </a>
+      </div>
+    </nav>
+
+    <!-- Main Content Start -->
+    <main class="page-content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="main-heading">
+              <h3>Analytics</h3>
+              <ul>
+                <li>
+                  <span>Desh / <strong>Dashboard</strong></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-3">
+            <div class="single-report">
+              <div class="content">
+                <p class="report-p">Sessions</p>
+                <h3 class="text-danger">1902</h3>
+                <p class="mb-0 text-truncate text-muted">
+                  <span class="text-success">
+                    <i class='bx bx-trending-up'></i>8.5%
+                  </span> New Sessions Today
+                </p>
+              </div>
+              <div class="icon">
+                <div id="chart5"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="single-report">
+              <div class="content">
+                <p class="report-p">Orders</p>
+                <h3 class="text-success">323</h3>
+                <p class="mb-0 text-truncate text-muted">
+                  <span class="text-danger">
+                    <i class='bx bx-trending-down'></i>32.6%
+                  </span>New Orders Today
+                </p>
+              </div>
+              <div class="icon">
+                <div id="chart6"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="single-report">
+              <div class="content">
+                <p class="report-p">Revenue</p>
+                <h3 class="text-success">$2,454</h3>
+                <p class="mb-0 text-truncate text-muted">
+                  <span class="text-success">
+                    <i class='bx bx-up-arrow-alt'></i>24.5%
+                  </span>Compare to last month (November)
+                </p>
+              </div>
+              <div class="icon">
+                <div id="chart3"></div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="single-report">
+              <div class="content">
+                <p class="report-p">Net Profit</p>
+                <h3 class="text-danger">$6,982</h3>
+                <p class="mb-0 text-truncate text-muted">
+                  <span class="text-danger">
+                    <i class='bx bx-down-arrow-alt'></i>-2.7%
+                  </span> Compare to last month (November)
+                </p>
+              </div>
+              <div class="icon">
+                <div id="chart4"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-lg-9">
+            <div class="statics-chart">
+              <h3>Statistics</h3>
+              <div id="chart1"></div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="statics-chart">
+              <h3>Traffic Sources</h3>
+              <div id="chart7"></div>
+              <div class="text-center">
+                <h5 class="mt-3">86% Direct Visitors</h5>
+                <p class="text-muted mt-2">This is a simple hero unit, a simple jumbotron-style component</p>
+                <button type="button" class="btn btn-sm btn-outline-primary px-3 mt-2">More details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-30">
+          <div class="col-lg-4">
+            <div class="statics-chart">
+              <h3>Fans By Ages : Fb Page</h3>
+              <div id="chart8"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="statics-chart">
+              <div id="chartdiv"></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Main Content End -->
+
+  </div>
+
+  <!-- jQuery Min JS -->
+  <script src="assets/js/jquery-3.5.0.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="assets/js/bootstrap.min.js"></script>
+  <!-- Boxicon JS -->
+  <script src="assets/js/boxicons.js"></script>
+  <!-- Apexcharts JS -->
+  <script src="assets/js/apexcharts.js"></script>
+  <!-- Main JS -->
+  <script src="assets/js/chartdata.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/geodata/data/countries2.js"></script>
+  <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    am4core.ready(function () {
+
+      // Themes begin
+      am4core.useTheme(am4themes_animated);
+      // Themes end
+
+      var continents = {
+        "AF": 0,
+        "AN": 1,
+        "AS": 2,
+        "EU": 3,
+        "NA": 4,
+        "OC": 5,
+        "SA": 6
+      }
+
+      // Create map instance
+      var chart = am4core.create("chartdiv", am4maps.MapChart);
+      chart.projection = new am4maps.projections.Miller();
+
+      // Create map polygon series for world map
+      var worldSeries = chart.series.push(new am4maps.MapPolygonSeries());
+      worldSeries.useGeodata = true;
+      worldSeries.geodata = am4geodata_worldLow;
+      worldSeries.exclude = ["AQ"];
+
+      var worldPolygon = worldSeries.mapPolygons.template;
+      worldPolygon.tooltipText = "{name}";
+      worldPolygon.nonScalingStroke = true;
+      worldPolygon.strokeOpacity = 0.5;
+      worldPolygon.fill = am4core.color("#eee");
+      worldPolygon.propertyFields.fill = "color";
+
+      var hs = worldPolygon.states.create("hover");
+      hs.properties.fill = chart.colors.getIndex(9);
 
 
-    <!-- jQuery Min JS -->
-    <script src="assets/js/jquery-3.5.0.min.js"></script>
-    <!-- Bootstrap JS -->
-    <script src="assets/js/bootstrap.min.js"></script>
-    <!-- Boxicon JS -->
-    <script src="assets/js/boxicons.js"></script>
-    <script src="assets/js/TweenMax.min.js"></script>
-    <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+      // Create country specific series (but hide it for now)
+      var countrySeries = chart.series.push(new am4maps.MapPolygonSeries());
+      countrySeries.useGeodata = true;
+      countrySeries.hide();
+      countrySeries.geodataSource.events.on("done", function (ev) {
+        worldSeries.hide();
+        countrySeries.show();
+      });
+
+      var countryPolygon = countrySeries.mapPolygons.template;
+      countryPolygon.tooltipText = "{name}";
+      countryPolygon.nonScalingStroke = true;
+      countryPolygon.strokeOpacity = 0.5;
+      countryPolygon.fill = am4core.color("#eee");
+
+      var hs = countryPolygon.states.create("hover");
+      hs.properties.fill = chart.colors.getIndex(9);
+
+      // Set up click events
+      worldPolygon.events.on("hit", function (ev) {
+        ev.target.series.chart.zoomToMapObject(ev.target);
+        var map = ev.target.dataItem.dataContext.map;
+        if (map) {
+          ev.target.isHover = false;
+          countrySeries.geodataSource.url = "https://www.amcharts.com/lib/4/geodata/json/" + map + ".json";
+          countrySeries.geodataSource.load();
+        }
+      });
+
+      // Set up data for countries
+      var data = [];
+      for (var id in am4geodata_data_countries2) {
+        if (am4geodata_data_countries2.hasOwnProperty(id)) {
+          var country = am4geodata_data_countries2[id];
+          if (country.maps.length) {
+            data.push({
+              id: id,
+              color: chart.colors.getIndex(continents[country.continent_code]),
+              map: country.maps[0]
+            });
+          }
+        }
+      }
+      worldSeries.data = data;
+
+      // Zoom control
+      chart.zoomControl = new am4maps.ZoomControl();
+
+      var homeButton = new am4core.Button();
+      homeButton.events.on("hit", function () {
+        worldSeries.show();
+        countrySeries.hide();
+        chart.goHome();
+      });
+
+      homeButton.icon = new am4core.Sprite();
+      homeButton.padding(7, 5, 7, 5);
+      homeButton.width = 30;
+      homeButton.icon.path = "M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8";
+      homeButton.marginBottom = 10;
+      homeButton.parent = chart.zoomControl;
+      homeButton.insertBefore(chart.zoomControl.plusButton);
+
+    }); // end am4core.ready()
+  </script>
 
 </body>
 
